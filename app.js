@@ -16,9 +16,10 @@ var valorMayorDiez =[];//multiply
 var valorCifra = [];//
 var sumaDosDigitos = [];
 var total=0;
-var numeros = /0-9/
-if(numbTarget == 'undefined' || !numeros.test(numbTarget)){//primero verifica si se ingresa numero o si la variable esta vacia
+var numeros = /[0-9]/
+if(numbTarget === undefined || !numeros.test(numbTarget)){//primero verifica si se ingresa numero o si la variable esta vacia
 	alert('Debe ingresar numeros!');
+	//return false;
 }else {
 
 for(var i = 0;i < numbTarget.length ; i++){//el array creado se invierte 
@@ -39,7 +40,7 @@ delete numbTarget[i-1];//se elimina el valor de el array (este deja en la posici
 
 for(var j=0;j<valorMayorDiez.length;j++){//se cuenta la posicion de los valores
 	 if(valorMayorDiez[j] >=10){//verifica si el valor es mayor a 10
-			sumaDosDigitos.push(valorMayorDiez[j]- 10 + 1);//suma dos digitos entre si
+			sumaDosDigitos.push(valorMayorDiez[j]- 10+1);//suma dos digitos entre si
 				 delete valorMayorDiez[j];//se elimina el valor de el array (este deja en la posicion un 'empty x 1')
 		}else{
 			valorCifra.push(valorMayorDiez[j]);//se agregan en el nuevo array los valores menores a 10

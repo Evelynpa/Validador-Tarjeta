@@ -6,7 +6,7 @@
 -comprobar si es una targeta valida
 */
 
-
+function isValidCard(){
 var tarjeta = prompt("Ingrese numero de tarjeta");
 var separador = tarjeta.split('');//separa con comas el string
 var numbTarget = JSON.parse("[" + separador + "]");//lo convierte en array
@@ -16,8 +16,8 @@ var valorMayorDiez =[];//multiply
 var valorCifra = [];//
 var sumaDosDigitos = [];
 var total=0;
-
-if(typeof numbTarget === 'undefined' || numbTarget.length < 0){//primero verifica si se ingresa numero o si la variable esta vacia
+var numeros = /0-9/
+if(numbTarget == 'undefined' || !numeros.test(numbTarget)){//primero verifica si se ingresa numero o si la variable esta vacia
 	alert('Debe ingresar numeros!');
 }else {
 
@@ -57,3 +57,6 @@ for(var j=0;j<valorMayorDiez.length;j++){//se cuenta la posicion de los valores
 		document.write('Número de targeta '+tarjeta +' no es válida');//si el resultado es false
 	}
 }
+}
+
+isValidCard();

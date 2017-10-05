@@ -1,0 +1,36 @@
+INICIO
+	Leer tarjeta,separador,numTarget,arrInvert,nuevoNumTarget,valorMayorDiez,ValorCifra,sumaDosDigitos,total,arrfinal
+	tarjeta = Escribir 'Ingrese numero de targeta'
+	separador = En tarjeta utilizo un metodo para separar la cadena con comas
+	numTarget = En variable separador convierto el string a array
+	FinPara
+	Para i<-0 Hasta numTarget Con Paso 1 Hacer
+		arrInvert = En variable numbTarget quita cada valor comenzando desde el ultimo
+		En variable numbTarget agrega cada valor de variable arrInvert sin remover ninguno(0) 
+	Fin Para
+	Para i<-1 Hasta numTarget+1 Con Paso 1 Hacer
+		Si posicion i es par Entonces
+			se multiplica el valor * 2 de la posicion par y se agrega a la variable valorMayorDiez
+			se elimina el valor de el array numbTarget(este deja en la posicion un 'empty x 1')
+		SiNo
+			se agregan en el nuevo array nuevoNumtarget los valores de posiciones impares
+		Fin Si
+	Fin Para
+	Para j<-0 Hasta valorMayorDiez Con Paso 1 Hacer
+		Si valorMayorDiez >= 10 Entonces
+			suma dos digitos entre si y se agragan a variable sumaDosDigitos
+			se elimina el valor de el array valorMayorDiez(este deja en la posicion un 'empty x 1')
+		SiNo
+			se agregan en la nueva variable valorCifra los valores menores a 10
+		Fin Si
+	Fin Para
+	se unen los nuevos arreglos creados de las variables nuevoNumtarget,valorCifra,sumaDosDigitos con la variable arrfinal
+	Para i<-0 Hasta arrfinal Con Paso 1 Hacer
+		se suma cada valor del arrfinal 
+	Fin Para
+	Si total %10 === 0 Entonces
+		Imprimir 'Número de targeta válida'
+	SiNo
+		Imprimir 'Número de targeta no válida'
+	Fin Si
+FIN

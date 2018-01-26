@@ -1,0 +1,11 @@
+{
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.tabCompletion": true,
+    "editor.lineNumbers": "on",
+    "editor.detectIndentation": true,
+    "files.autoSave": "afterDelay",
+    "workbench.sideBar.location": "left",
+    "window.zoomLevel": -1
+ }
